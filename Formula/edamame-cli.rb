@@ -1,9 +1,9 @@
 class EdamameCli < Formula
   desc "EDAMAME CLI interface to EDAMAME Posture service"
   homepage "https://edamame.tech"
-  url "https://github.com/edamametechnologies/edamame_cli/releases/download/v1.0.6/edamame_cli-1.0.6-universal-apple-darwin"
-  sha256 "151d1f5d65604e4bf6bf9a6b1cbc58df49e6f20b6df4d8aa7204dadc770c5ecc"
-  version "1.0.6"
+  url "https://github.com/edamametechnologies/edamame_cli/releases/download/v1.0.7/edamame_cli-1.0.7-universal-apple-darwin"
+  sha256 "b0df161d1b72aeb7a1bdca8f456fc208ec8c5ca3afec9eb1b393d0a2f2cbf672"
+  version "1.0.7"
   license "Apache-2.0"
 
   def install
