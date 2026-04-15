@@ -3,7 +3,7 @@
 
 cask "edamame-helper" do
   version "1.2.0"
-  sha256 "24b54f78b09c802c2cfbe823202b666114251eb68c2a743beeefc31cb09d2b37"
+  sha256 "5e674c2285e27aa9e2828f5f2a08d4a524550f099dd0812166f5c14417e1d5f0"
 
   url "https://github.com/edamametechnologies/edamame_helper/releases/download/v#{version}/edamame-helper-macos-#{version}.pkg"
   name "EDAMAME Helper"
@@ -19,5 +19,8 @@ cask "edamame-helper" do
 
   caveats <<~EOS
     This application requires admin privileges to install and uninstall.
+    The package installs an app-like helper bundle with an embedded Endpoint
+    Security provisioning profile and registers a LaunchDaemon that points into
+    that bundle.
   EOS
 end
