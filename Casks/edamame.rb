@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "edamame" do
-  version "1.2.0"
-  sha256 "d991e938c5d207c2e6ed4a329ed6dc3ac156e949214b83899fce99990ccd35d6"
+  version "1.2.1"
+  sha256 "dc122310cfda13d13550654b2cf2d6957a72a49dd391f5e4ee72bcbaf2e1dd30"
 
   url "https://github.com/edamametechnologies/edamame_security/releases/download/v#{version}/edamame-macos-#{version}.pkg"
   name "EDAMAME Security"
