@@ -3,7 +3,7 @@
 
 cask "edamame-posture" do
   version "1.3.5"
-  sha256 "3fa708e61c77e1e5e798ecec3d27b7372621e20d8e6694f2e7a5e74f13339add"
+  sha256 "631498d49bb6d3c299756dd7719e01f1b7c3ea210c853d3f1ae7fb963bc2f771"
 
   url "https://github.com/edamametechnologies/edamame_posture_cli/releases/download/v#{version}/edamame-posture-macos-#{version}.pkg"
   name "EDAMAME Posture"
