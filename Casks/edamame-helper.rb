@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "edamame-helper" do
-  version "1.3.23"
-  sha256 "569992810493e57d66681d095d5f0affb41c11b91751e4674c0240d046f68429"
+  version "1.3.24"
+  sha256 "565f500e05b3b44ea08ec4d5f7f8860c587885b3810990add518224f8d46664a"
 
   url "https://github.com/edamametechnologies/edamame_helper/releases/download/v#{version}/edamame-helper-macos-#{version}.pkg"
   name "EDAMAME Helper"
