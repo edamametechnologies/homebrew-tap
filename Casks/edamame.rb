@@ -23,7 +23,7 @@ cask "edamame" do
     After installation, you can launch the app from Applications or use edamame_posture CLI.
     
     Note: For full functionality, also install EDAMAME Helper separately:
-      brew install --cask edamame-helper
+      brew install --cask edamametechnologies/tap/edamame-helper
   EOS
 end
 
