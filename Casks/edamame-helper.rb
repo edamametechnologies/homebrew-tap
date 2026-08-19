@@ -3,7 +3,7 @@
 
 cask "edamame-helper" do
   version "1.8.0"
-  sha256 "50d8f14ac453a6cfefe9d033d51f0fd9d21bc1985d594de1a00edc4030e652ef"
+  sha256 "37063b3d7210d8f949776b8cd0ffd401f7e557f5e72a359c27bc3ae03506de38"
 
   url "https://github.com/edamametechnologies/edamame_helper/releases/download/v#{version}/edamame-helper-macos-#{version}.pkg"
   name "EDAMAME Helper"
