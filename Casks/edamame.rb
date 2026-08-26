@@ -3,7 +3,7 @@
 
 cask "edamame" do
   version "1.8.1"
-  sha256 "191f7daddc0329fa28a610bd65569dae90f78cc6e673a142267b3d133db0513b"
+  sha256 "1e09d3bf2ef6d0e9d3bf99a233f0c410c84913cd741fc914b9a0df7b71c070f3"
 
   url "https://github.com/edamametechnologies/edamame_security/releases/download/v#{version}/edamame-macos-#{version}.pkg"
   name "EDAMAME Security"
