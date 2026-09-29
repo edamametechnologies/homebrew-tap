@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "edamame-posture" do
-  version "2.0.1"
-  sha256 "1df6e8a58368bcd259f195f539853704725a10879ce258ae2901070b0f7ee5d5"
+  version "2.0.2"
+  sha256 "0f09ae4118d5671aa720d1b46ea9016e6d4d06d541910f742a789fc8d1ab6277"
 
   url "https://github.com/edamametechnologies/edamame_posture_cli/releases/download/v#{version}/edamame-posture-macos-#{version}.pkg"
   name "EDAMAME Posture"
@@ -12,9 +12,18 @@ cask "edamame-posture" do
 
   pkg "edamame-posture-macos-#{version}.pkg"
 
-  uninstall delete: [
-    "/usr/local/bin/edamame_posture",
-    "/Library/Application Support/EDAMAME/EDAMAME-Posture/edamame_posture.app",
+  # launchctl/delete of the LaunchDaemon cover `edamame_posture install-service`;
+  # the configuration file is kept.
+  uninstall launchctl: "com.edamametechnologies.edamame-posture",
+            delete:    [
+              "/Library/LaunchDaemons/com.edamametechnologies.edamame-posture.plist",
+              "/usr/local/bin/edamame_posture",
+              "/Library/Application Support/EDAMAME/EDAMAME-Posture/edamame_posture.app",
+            ]
+
+  zap delete: [
+    "/Library/Application Support/EDAMAME/EDAMAME-Posture/service-enabled",
+    "/Library/Application Support/EDAMAME/EDAMAME-Posture/edamame_posture.conf",
   ]
 
   caveats <<~EOS
@@ -22,5 +31,11 @@ cask "edamame-posture" do
     The package installs an app-like bundle with an embedded Endpoint Security
     provisioning profile and exposes /usr/local/bin/edamame_posture as a
     symlink into that bundle.
+
+    To run it as a service that survives reboots (EDAMAME >= 2.0.2):
+      sudo edamame_posture install-service
+    then edit /Library/Application Support/EDAMAME/EDAMAME-Posture/edamame_posture.conf
+    and restart it with:
+      sudo launchctl kickstart -k system/com.edamametechnologies.edamame-posture
   EOS
 end
