@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "edamame-posture" do
-  version "2.0.9"
-  sha256 "e8d7c729e02dd12e22b5e0045b4f90660efd1f265afff2689abc4484ffff615c"
+  version "2.1.0"
+  sha256 "70e5e6dffb9239c0da93e0cc2ecd2b73acdee5db2247cfd0f1f0837302cfc490"
 
   url "https://github.com/edamametechnologies/edamame_posture_cli/releases/download/v#{version}/edamame-posture-macos-#{version}.pkg"
   name "EDAMAME Posture"
